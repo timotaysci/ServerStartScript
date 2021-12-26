@@ -18,7 +18,9 @@ screen -S emacsforsci -X stuff $'bundle exec jekyll serve^M'&
 screen -S TJE -d -m
 screen -S TJE -X stuff $'cd ~/website/TJE/^M' &&
 screen -S TJE -X stuff $'bundle exec jekyll build^M'&&
-screen -S TJE -X stuff $'bundle exec jekyll serve^M'&
+screen -S TJE -X stuff $'bundle exec jekyll serve^M'&+
+#Need to add sleep here to give script time to run and it's a silly bodge
+#TODO - add a wait with process IDs
 sleep 30
 printf "Done! \n"
 
